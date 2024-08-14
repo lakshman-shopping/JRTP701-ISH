@@ -1,0 +1,21 @@
+server:
+  port: 6061
+spring:
+  application:
+    name: Jrtp701-ApplicationRegistrationService
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Lakshman$#865
+    url: jdbc:mysql:///jrtp701-ish-db
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+ar:
+  ssa-web:
+    url: http://localhost:9090/ssa-web-api/find/{ssn}
+  state: california
