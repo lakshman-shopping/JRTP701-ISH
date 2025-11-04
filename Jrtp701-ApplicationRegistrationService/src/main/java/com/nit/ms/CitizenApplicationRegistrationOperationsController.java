@@ -17,7 +17,8 @@ public class CitizenApplicationRegistrationOperationsController {
 	@Autowired
     private ICitizenApplicationRegistrationService registerService;
 	
-	@PostMapping("/save")
+	
+	/*@PostMapping("/save")
 	public ResponseEntity<String>	  saveCitizenApplication(@RequestBody CitizenAppRegistrationInputs inputs){
 		
 		try {
@@ -31,6 +32,13 @@ public class CitizenApplicationRegistrationOperationsController {
 		catch(Exception e) {
 			return new ResponseEntity<String>(e.getMessage(),HttpStatus.BAD_REQUEST);
 		}
-	}//method
+	}//method*/
 	   
+	@PostMapping("/save")
+	public ResponseEntity<String>	  saveCitizenApplication(@RequestBody CitizenAppRegistrationInputs inputs)throws Exception{
+		
+		int appId= registerService.registerCitizenApplication(inputs);
+		return new ResponseEntity<String>("Citizen Application is registered with the Id::"+appId,HttpStatus.CREATED);
+			
+	}//method
 }//class

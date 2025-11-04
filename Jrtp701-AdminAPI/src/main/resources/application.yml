@@ -1,0 +1,17 @@
+server:
+  port: 6068
+spring:
+  application:
+    name: Jrtp701-AdminAPIService
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///jrtp701-ish-db
+    username: root
+    password: Lakshman$#865
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
