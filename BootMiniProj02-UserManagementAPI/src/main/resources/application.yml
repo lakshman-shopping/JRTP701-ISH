@@ -1,0 +1,36 @@
+server:
+  port: 4041
+spring:
+  application:
+    name: BootMiniProj02-UserManagementAPI
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///sys
+    username: springstudent
+    password: springstudent
+  jpa: 
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialet: org.hibernate.dialet.MySQL8Dialet
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: lakshmanparise123@gmail.com
+    password: dbqv jfkv npaj sxrg
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+mailbody: 
+  registeruser:
+    location: src/main/java/com/nit/service/user_registration_body.txt
+  recoverpwd:
+    location: src/main/java/com/nit/service/recover_pwd_body.txt
